@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English with Anička – Lesson 5</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #2a7a6f;
+    --teal-light: #e8f4f2;
+    --teal-mid: #b8ddd9;
+    --amber: #d4890a;
+    --amber-light: #fef4e3;
+    --coral: #c0453a;
+    --coral-light: #fdf0ef;
+    --ink: #1c1c1e;
+    --mid: #555;
+    --soft: #888;
+    --rule: #e0e0e0;
+    --bg: #fff;
+    --card-bg: #fafafa;
+    --section-badge: #f0f0f0;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9.5pt;
+    color: var(--ink);
+    background: white;
+    line-height: 1.5;
+  }
+
+  /* ── PAGE LAYOUT ── */
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 0;
+    background: white;
+    page-break-after: always;
+  }
+
+  @media print {
+    body { margin: 0; }
+    .page { margin: 0; page-break-after: always; }
+    @page { size: A4; margin: 0; }
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: var(--ink);
+    color: white;
+    padding: 18px 28px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .header-left .eyebrow {
+    font-size: 7pt;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaa;
+    font-weight: 500;
+    margin-bottom: 3px;
+  }
+
+  .header-left h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 22pt;
+    font-weight: 300;
+    line-height: 1;
+    color: white;
+  }
+
+  .header-left h1 em {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 24pt;
+    color: #8dcfc8;
+  }
+
+  .header-left .sub {
+    font-size: 7.5pt;
+    color: #888;
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+  }
+
+  .header-right {
+    text-align: right;
+  }
+
+  .badge {
+    display: inline-block;
+    border: 1px solid #555;
+    border-radius: 3px;
+    padding: 2px 8px;
+    font-size: 6.5pt;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #ccc;
+    margin-bottom: 3px;
+  }
+
+  .badge.highlight {
+    background: var(--teal);
+    border-color: var(--teal);
+    color: white;
+  }
+
+  /* ── CONTENT AREA ── */
+  .content {
+    padding: 16px 28px 20px;
+  }
+
+  /* ── SECTION ── */
+  .section {
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    margin-bottom: 13px;
+    overflow: hidden;
+    background: white;
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 14px 7px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10pt;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .section-title .icon {
+    font-size: 13px;
+  }
+
+  .section-num {
+    font-size: 6.5pt;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--soft);
+    background: var(--section-badge);
+    padding: 2px 7px;
+    border-radius: 3px;
+  }
+
+  .section-body {
+    padding: 11px 14px;
+  }
+
+  /* ── WARM-UP ── */
+  .warmup-grid {
+    display: grid;
+    gap: 6px;
+  }
+
+  .warmup-item {
+    display: flex;
+    gap: 9px;
+    align-items: flex-start;
+    padding: 7px 10px;
+    background: var(--card-bg);
+    border-radius: 4px;
+    border-left: 3px solid transparent;
+  }
+
+  .warmup-item.hw { border-left-color: var(--amber); }
+  .warmup-item.chat { border-left-color: var(--teal); }
+
+  .item-label {
+    font-size: 6.5pt;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--soft);
+    white-space: nowrap;
+    padding-top: 1px;
+    min-width: 80px;
+  }
+
+  .item-label.amber { color: var(--amber); }
+  .item-label.teal { color: var(--teal); }
+
+  .item-text {
+    font-size: 9pt;
+    color: var(--ink);
+    line-height: 1.4;
+  }
+
+  /* ── VOCABULARY ── */
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  .vocab-card {
+    background: var(--card-bg);
+    border-radius: 4px;
+    padding: 7px 10px;
+    border-top: 2px solid var(--teal-mid);
+  }
+
+  .vocab-word {
+    font-size: 10pt;
+    font-weight: 600;
+    color: var(--teal);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    margin-bottom: 1px;
+  }
+
+  .vocab-def {
+    font-size: 8pt;
+    color: var(--mid);
+    margin-bottom: 3px;
+  }
+
+  .vocab-example {
+    font-size: 8pt;
+    color: var(--teal);
+    font-style: italic;
+  }
+
+  /* ── LISTENING ── */
+  .video-box {
+    background: var(--ink);
+    color: white;
+    border-radius: 5px;
+    padding: 9px 13px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .play-btn {
+    width: 28px;
+    height: 28px;
+    background: #e63946;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 10px;
+  }
+
+  .video-info {
+    flex: 1;
+  }
+
+  .video-title {
+    font-size: 9pt;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .video-url {
+    font-size: 7.5pt;
+    color: #8dcfc8;
+  }
+
+  .video-arrow {
+    font-size: 14px;
+    color: #666;
+  }
+
+  .qs-label {
+    font-size: 7pt;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--soft);
+    font-weight: 600;
+    margin: 8px 0 5px;
+  }
+
+  .q-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .q-list li {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    padding: 5px 9px;
+    background: var(--card-bg);
+    border-radius: 3px;
+    font-size: 8.5pt;
+  }
+
+  .q-num {
+    font-weight: 700;
+    color: var(--teal);
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    font-size: 10pt;
+    line-height: 1.2;
+    flex-shrink: 0;
+  }
+
+  .q-hint {
+    font-size: 7.5pt;
+    color: var(--soft);
+    font-style: italic;
+    margin-top: 2px;
+  }
+
+  .stop-marker {
+    font-size: 6.5pt;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--coral);
+    background: var(--coral-light);
+    padding: 2px 7px;
+    border-radius: 3px;
+    margin: 6px 0 4px;
+    display: inline-block;
+  }
+
+  /* ── GRAMMAR ── */
+  .grammar-intro {
+    font-size: 8.5pt;
+    color: var(--mid);
+    font-style: italic;
+    margin-bottom: 10px;
+    background: var(--teal-light);
+    padding: 7px 10px;
+    border-radius: 4px;
+    border-left: 3px solid var(--teal);
+  }
+
+  .modal-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8.5pt;
+    margin-bottom: 10px;
+  }
+
+  .modal-table th {
+    background: var(--ink);
+    color: white;
+    padding: 5px 10px;
+    text-align: left;
+    font-size: 7.5pt;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .modal-table td {
+    padding: 6px 10px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+
+  .modal-table tr:last-child td { border-bottom: none; }
+
+  .modal-table tr:nth-child(odd) td { background: var(--card-bg); }
+
+  .modal-word {
+    font-weight: 700;
+    color: var(--teal);
+    font-size: 9.5pt;
+    white-space: nowrap;
+  }
+
+  .modal-meaning {
+    color: var(--mid);
+    font-size: 8pt;
+  }
+
+  .modal-example {
+    font-style: italic;
+    color: #333;
+  }
+
+  .fill-task-label {
+    font-size: 7pt;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--soft);
+    margin: 9px 0 6px;
+  }
+
+  .fill-item {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    padding: 5px 9px;
+    border-bottom: 1px dashed var(--rule);
+    font-size: 8.5pt;
+  }
+
+  .fill-item:last-child { border-bottom: none; }
+
+  .fill-num {
+    font-weight: 700;
+    color: var(--teal);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 10pt;
+    flex-shrink: 0;
+    width: 14px;
+  }
+
+  .fill-line {
+    display: inline-block;
+    border-bottom: 1.5px solid var(--ink);
+    width: 80px;
+    margin: 0 3px;
+  }
+
+  /* ── SPEAKING ── */
+  .speaking-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
+    margin-bottom: 9px;
+  }
+
+  .speak-card {
+    background: var(--card-bg);
+    border-radius: 4px;
+    padding: 8px 10px;
+    border-top: 2px solid var(--rule);
+  }
+
+  .speak-card.teal-top { border-top-color: var(--teal); }
+  .speak-card.amber-top { border-top-color: var(--amber); }
+  .speak-card.coral-top { border-top-color: var(--coral); }
+
+  .speak-label {
+    font-size: 6.5pt;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--soft);
+    margin-bottom: 4px;
+  }
+
+  .speak-label.teal { color: var(--teal); }
+  .speak-label.amber { color: var(--amber); }
+  .speak-label.coral { color: var(--coral); }
+
+  .speak-q {
+    font-size: 8.5pt;
+    color: var(--ink);
+    line-height: 1.4;
+  }
+
+  .phrases-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 8px;
+  }
+
+  .phrase-chip {
+    background: var(--teal-light);
+    color: var(--teal);
+    border: 1px solid var(--teal-mid);
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 8pt;
+    font-style: italic;
+  }
+
+  /* ── WRITING ── */
+  .writing-task {
+    background: var(--amber-light);
+    border: 1px solid #f0d090;
+    border-radius: 5px;
+    padding: 9px 12px;
+    margin-bottom: 9px;
+  }
+
+  .writing-task p {
+    font-size: 8.5pt;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .writing-task .prompt-highlight {
+    font-weight: 600;
+    color: var(--amber);
+  }
+
+  .lines {
+    border-top: 1.5px solid #ddd;
+    margin-top: 6px;
+  }
+
+  .write-line {
+    border-bottom: 1px solid #ddd;
+    height: 18px;
+  }
+
+  /* ── EXTRA VOCAB ── */
+  .extra-vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+
+  .ev-card {
+    padding: 6px 9px;
+    background: var(--card-bg);
+    border-radius: 4px;
+    border-left: 2px solid var(--teal-mid);
+  }
+
+  .ev-word {
+    font-size: 8.5pt;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 1px;
+  }
+
+  .ev-trans {
+    font-size: 7.5pt;
+    color: var(--soft);
+    margin-bottom: 2px;
+  }
+
+  .ev-example {
+    font-size: 7.5pt;
+    color: var(--teal);
+    font-style: italic;
+  }
+
+  /* ── HOMEWORK ── */
+  .hw-box {
+    background: var(--ink);
+    color: white;
+    border-radius: 6px;
+    padding: 10px 14px;
+  }
+
+  .hw-box .hw-eyebrow {
+    font-size: 6.5pt;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+
+  .hw-box .hw-task {
+    font-size: 9pt;
+    line-height: 1.5;
+    color: #eee;
+  }
+
+  .hw-box .hw-task strong {
+    color: #8dcfc8;
+  }
+
+  /* ── PAGE 2 HEADER ── */
+  .page2-top {
+    background: var(--teal-light);
+    border-bottom: 2px solid var(--teal-mid);
+    padding: 10px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page2-title {
+    font-size: 8.5pt;
+    color: var(--teal);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .page2-subtitle {
+    font-size: 7.5pt;
+    color: var(--soft);
+  }
+
+  /* ── READING TEXT ── */
+  .reading-text {
+    font-size: 8.5pt;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--card-bg);
+    border-radius: 5px;
+    padding: 10px 13px;
+    margin-bottom: 8px;
+    border-left: 3px solid var(--teal);
+  }
+
+  .reading-text p { margin-bottom: 5px; }
+  .reading-text p:last-child { margin-bottom: 0; }
+
+  .reading-text .bold-word {
+    font-weight: 700;
+    color: var(--teal);
+  }
+
+  /* ── COMPREHENSION ── */
+  .comp-q {
+    display: flex;
+    gap: 8px;
+    padding: 5px 9px;
+    border-bottom: 1px dashed var(--rule);
+    font-size: 8.5pt;
+    align-items: flex-start;
+  }
+
+  .comp-q:last-child { border-bottom: none; }
+
+  /* ── FOOTER ── */
+  .footer {
+    margin-top: auto;
+    padding: 8px 28px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 7pt;
+    color: var(--soft);
+  }
+
+  .footer .flag { margin-right: 4px; }
+
+  /* ── DIVIDER ── */
+  .color-bar {
+    height: 3px;
+    background: linear-gradient(to right, var(--teal) 0%, var(--teal-mid) 40%, var(--amber) 70%, #f0b060 100%);
+  }
+
+  /* ─ two-col layout helper ─ */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ PAGE 1 ═══════════════════ -->
+<div class="page">
+
+  <div class="header">
+    <div class="header-left">
+      <div class="eyebrow">English Lesson · Fifth Class</div>
+      <h1>Sleep, Stress<br>&amp; <em>Well-being</em></h1>
+      <div class="sub">7. 4. 2026 &nbsp;·&nbsp; 60 minutes &nbsp;·&nbsp; online &nbsp;·&nbsp; conversation &amp; grammar</div>
+    </div>
+    <div class="header-right">
+      <div><span class="badge highlight">B1 LEVEL</span></div>
+      <div><span class="badge">MODAL VERBS</span></div>
+      <div><span class="badge">HEALTH &amp; LIFESTYLE</span></div>
+    </div>
+  </div>
+
+  <div class="color-bar"></div>
+
+  <div class="content">
+
+    <!-- SECTION 1 – WARM-UP -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-title"><span class="icon">💬</span> Warm-Up: Homework Check &amp; Chat</div>
+        <span class="section-num">SECTION 1</span>
+      </div>
+      <div class="section-body">
+        <div class="warmup-grid">
+          <div class="warmup-item hw">
+            <div class="item-label amber">Homework</div>
+            <div class="item-text">Did you check your screen time this week? How many hours? Which app did you use most? Were you surprised by the number?</div>
+          </div>
+          <div class="warmup-item chat">
+            <div class="item-label teal">Quick chat</div>
+            <div class="item-text">How are you feeling today? Did anything interesting happen at school this week?</div>
+          </div>
+          <div class="warmup-item chat">
+            <div class="item-label teal">Warm-up Q</div>
+            <div class="item-text">What time do you usually go to bed? Do you think you get enough sleep? What happens when you don't sleep enough?</div>
+          </div>
+          <div class="warmup-item chat">
+            <div class="item-label teal">School check</div>
+            <div class="item-text">Which unit are you on now in Life Vision at school? Is there anything you want to practise together today?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2 – KEY VOCABULARY -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-title"><span class="icon">📖</span> Key Vocabulary — Health &amp; Well-being</div>
+        <span class="section-num">SECTION 2</span>
+      </div>
+      <div class="section-body">
+        <div class="vocab-grid">
+          <div class="vocab-card">
+            <div class="vocab-word">well-being</div>
+            <div class="vocab-def">the state of being healthy and happy</div>
+            <div class="vocab-example">"Sleep is essential for your well-being."</div>
+          </div>
+          <div class="vocab-card">
+            <div class="vocab-word">exhausted</div>
+            <div class="vocab-def">extremely tired, completely without energy</div>
+            <div class="vocab-example">"I was so exhausted I fell asleep on the bus."</div>
+          </div>
+          <div class="vocab-card">
+            <div class="vocab-word">to concentrate</div>
+            <div class="vocab-def">to focus your attention on something</div>
+            <div class="vocab-example">"I can't concentrate when I'm tired."</div>
+          </div>
+          <div class="vocab-card">
+            <div class="vocab-word">stressed out</div>
+            <div class="vocab-def">feeling anxious and overwhelmed by pressure</div>
+            <div class="vocab-example">"She's really stressed out about her exams."</div>
+          </div>
+          <div class="vocab-card">
+            <div class="vocab-word">to affect</div>
+            <div class="vocab-def">to have an impact on something or someone</div>
+            <div class="vocab-example">"Lack of sleep affects your mood."</div>
+          </div>
+          <div class="vocab-card">
+            <div class="vocab-word">a habit</div>
+            <div class="vocab-def">something you do regularly, often without thinking</div>
+            <div class="vocab-example">"I have a habit of checking my phone at night."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 3 – LISTENING -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-title"><span class="icon">🎧</span> Listening — BBC 6 Minute English</div>
+        <span class="section-num">SECTION 3</span>
+      </div>
+      <div class="section-body">
+
+        <div class="video-box">
+          <div class="play-btn">▶</div>
+          <div class="video-info">
+            <div class="video-title">How much sleep do you really need? — BBC 6 Minute English</div>
+            <div class="video-url">youtube.com/watch?v=LpMONNzO5jc &nbsp;·&nbsp; watch first without subtitles, then with</div>
+          </div>
+          <div class="video-arrow">↗</div>
+        </div>
+
+        <div class="qs-label">Before you watch — Think first</div>
+        <ul class="q-list">
+          <li><span class="q-num">1.</span><div>How many hours of sleep do you think teenagers need — more or less than adults? Why?</div></li>
+          <li><span class="q-num">2.</span><div>Guess: what percentage of adults in the UK sleep less than 7 hours a night?
+            <div class="q-hint">→ a) 30% &nbsp; b) 50% &nbsp; c) 70% &nbsp; (answer at the end!)</div></div></li>
+        </ul>
+
+        <div class="stop-marker">Part 1 — stop here</div>
+        <ul class="q-list">
+          <li><span class="q-num">3.</span><div>How many hours does the presenter say we need? Is it the same for everyone?</div></li>
+          <li><span class="q-num">4.</span><div>What problems can too little sleep cause? List at least two.</div></li>
+        </ul>
+
+        <div class="stop-marker">Part 2 — stop here</div>
+        <ul class="q-list">
+          <li><span class="q-num">5.</span><div>Why do teenagers tend to go to bed later than adults? Is it laziness — or something biological?</div></li>
+          <li><span class="q-num">6.</span><div>The expert mentions "sleep debt." What do you think this means?
+            <div class="q-hint">→ think about: money and debt as a metaphor</div></div></li>
+        </ul>
+
+        <div class="stop-marker">Part 3 — to the end</div>
+        <ul class="q-list">
+          <li><span class="q-num">7.</span><div>What tips does the video give for better sleep? Would any of these work for you?</div></li>
+          <li><span class="q-num">8.</span><div>What was the answer to the UK sleep question? Were you surprised?</div></li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div><!-- /content -->
+
+  <div class="footer">
+    <div><span class="flag">🇬🇧</span> English Lesson with Anička · Level B1</div>
+    <div>Sleep, Stress &amp; Well-being · Modal Verbs</div>
+  </div>
+
+</div><!-- /page 1 -->
+
+
+<!-- ═══════════════════ PAGE 2 ═══════════════════ -->
+<div class="page">
+
+  <div class="page2-top">
+    <div class="page2-title">English with Anička — Lesson 5</div>
+    <div class="page2-subtitle">7. 4. 2026 &nbsp;·&nbsp; Modal Verbs &nbsp;·&nbsp; Speaking &amp; Writing</div>
+  </div>
+
+  <div class="color-bar"></div>
+
+  <div class="content">
+
+    <!-- SECTION 4 – GRAMMAR -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-title"><span class="icon">📐</span> Grammar: Modal Verbs for Advice &amp; Obligation</div>
+        <span class="section-num">SECTION 4</span>
+      </div>
+      <div class="section-body">
+
+        <div class="grammar-intro">
+          We use modal verbs to say what is necessary, recommended, or not needed. The form is always: <strong>modal + infinitive (without "to")</strong>.
+        </div>
+
+        <table class="modal-table">
+          <thead>
+            <tr>
+              <th>Modal</th>
+              <th>Meaning</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="modal-word">should</span></td>
+              <td><span class="modal-meaning">advice / recommendation (it's a good idea)</span></td>
+              <td><span class="modal-example">You should go to bed earlier.</span></td>
+            </tr>
+            <tr>
+              <td><span class="modal-word">shouldn't</span></td>
+              <td><span class="modal-meaning">advice against (it's a bad idea)</span></td>
+              <td><span class="modal-example">You shouldn't use your phone before sleep.</span></td>
+            </tr>
+            <tr>
+              <td><span class="modal-word">have to</span></td>
+              <td><span class="modal-meaning">obligation from outside (a rule or necessity)</span></td>
+              <td><span class="modal-example">I have to wake up at 6 for school.</span></td>
+            </tr>
+            <tr>
+              <td><span class="modal-word">don't have to</span></td>
+              <td><span class="modal-meaning">no obligation (it's not necessary — but OK if you want)</span></td>
+              <td><span class="modal-example">You don't have to sleep 9 hours, but it helps.</span></td>
+            </tr>
+            <tr>
+              <td><span class="modal-word">must</span></td>
+              <td><span class="modal-meaning">strong obligation — from yourself or a rule</span></td>
+              <td><span class="modal-example">I must stop scrolling at midnight.</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="fill-task-label">Task: Complete the sentences — choose the best modal verb.</div>
+        <div class="fill-item"><span class="fill-num">1.</span> You <span class="fill-line"></span> drink coffee in the evening — it makes it harder to sleep.</div>
+        <div class="fill-item"><span class="fill-num">2.</span> You <span class="fill-line"></span> get 8–10 hours of sleep every night if you're a teenager. It's really important.</div>
+        <div class="fill-item"><span class="fill-num">3.</span> I <span class="fill-line"></span> get up at 5:30 — school starts at 7 and I live far away.</div>
+        <div class="fill-item"><span class="fill-num">4.</span> You <span class="fill-line"></span> exercise every day, but even a walk helps.</div>
+        <div class="fill-item"><span class="fill-num">5.</span> She <span class="fill-line"></span> sleep more — she looks exhausted all the time.</div>
+        <div class="fill-item"><span class="fill-num">6.</span> Students <span class="fill-line"></span> use their phones during lessons — it's against the rules.</div>
+
+      </div>
+    </div>
+
+    <!-- SECTION 5 – SPEAKING -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-title"><span class="icon">🗣</span> Speaking — Your Experience</div>
+        <span class="section-num">SECTION 5</span>
+      </div>
+      <div class="section-body">
+        <div class="speaking-grid">
+          <div class="speak-card teal-top">
+            <div class="speak-label teal">Your Routine</div>
+            <div class="speak-q">What time do you go to bed on school days? Is it different at weekends? What do you usually do in the last hour before sleep?</div>
+          </div>
+          <div class="speak-card amber-top">
+            <div class="speak-label amber">Stress &amp; School</div>
+            <div class="speak-q">When do you feel most stressed? What do you do to relax? Does stress affect your sleep?</div>
+          </div>
+          <div class="speak-card coral-top">
+            <div class="speak-label coral">Give Advice!</div>
+            <div class="speak-q">Your friend sleeps only 5 hours, drinks 3 coffees a day and scrolls TikTok until 2am. What should / shouldn't they do? Give at least 4 pieces of advice using modal verbs.</div>
+          </div>
+          <div class="speak-card teal-top">
+            <div class="speak-label teal">Big Question</div>
+            <div class="speak-q">Is it possible to be healthy as a teenager in today's world — with school pressure, phones, and social media? Or is it a losing battle?</div>
+          </div>
+        </div>
+
+        <div style="font-size:7pt;color:var(--soft);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:5px;">Useful phrases — try to use them!</div>
+        <div class="phrases-row">
+          <span class="phrase-chip">"I think you should…"</span>
+          <span class="phrase-chip">"You really shouldn't…"</span>
+          <span class="phrase-chip">"In my experience…"</span>
+          <span class="phrase-chip">"I have to admit that…"</span>
+          <span class="phrase-chip">"On one hand… on the other hand…"</span>
+          <span class="phrase-chip">"I'm not sure, but…"</span>
+          <span class="phrase-chip">"That depends on…"</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 6 – WRITING -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-title"><span class="icon">✏️</span> Quick Writing Task</div>
+        <span class="section-num">SECTION 6</span>
+      </div>
+      <div class="section-body">
+        <div class="writing-task">
+          <p>Write <strong>4–6 sentences</strong> about your own habits and health. Use at least <span class="prompt-highlight">3 different modal verbs</span> (should / have to / must / don't have to / shouldn't).</p>
+          <p style="font-size:8pt;color:var(--mid);">Start with: <em>"To be healthier, I think I should…"</em> — and then be honest! 😊</p>
+        </div>
+        <div class="lines">
+          <div class="write-line"></div>
+          <div class="write-line"></div>
+          <div class="write-line"></div>
+          <div class="write-line"></div>
+          <div class="write-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LESSON SUMMARY + HOMEWORK -->
+    <div class="two-col">
+
+      <div class="section" style="margin-bottom:0">
+        <div class="section-header">
+          <div class="section-title"><span class="icon">📋</span> Vocabulary Summary</div>
+          <span class="section-num">LESSON RECAP</span>
+        </div>
+        <div class="section-body">
+          <div class="extra-vocab-grid">
+            <div class="ev-card">
+              <div class="ev-word">well-being</div>
+              <div class="ev-trans">pohoda / zdraví</div>
+            </div>
+            <div class="ev-card">
+              <div class="ev-word">exhausted</div>
+              <div class="ev-trans">vyčerpaný</div>
+            </div>
+            <div class="ev-card">
+              <div class="ev-word">to concentrate</div>
+              <div class="ev-trans">soustředit se</div>
+            </div>
+            <div class="ev-card">
+              <div class="ev-word">stressed out</div>
+              <div class="ev-trans">vystresovaný</div>
+            </div>
+            <div class="ev-card">
+              <div class="ev-word">to affect</div>
+              <div class="ev-trans">ovlivnit / působit na</div>
+            </div>
+            <div class="ev-card">
+              <div class="ev-word">a habit</div>
+              <div class="ev-trans">zvyk / návyk</div>
+            </div>
+            <div class="ev-card">
+              <div class="ev-word">sleep debt</div>
+              <div class="ev-trans">spánkový deficit</div>
+            </div>
+            <div class="ev-card">
+              <div class="ev-word">to stay up late</div>
+              <div class="ev-trans">jít spát pozdě</div>
+            </div>
+            <div class="ev-card">
+              <div class="ev-word">mood</div>
+              <div class="ev-trans">nálada</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="hw-box" style="margin-bottom:10px;">
+          <div class="hw-eyebrow">Homework</div>
+          <div class="hw-task">
+            This week, keep a <strong>2-day sleep diary</strong>. Write down: What time did you go to bed? What time did you wake up? How did you feel in the morning? Did anything affect your sleep (phone, stress, noise)?<br><br>
+            Next lesson, tell me: What did you notice? <strong>Use modal verbs</strong> when you talk about it — e.g. <em>"I think I should…"</em> or <em>"I have to…"</em>
+          </div>
+        </div>
+
+        <div style="background:var(--teal-light);border:1px solid var(--teal-mid);border-radius:5px;padding:9px 12px;">
+          <div style="font-size:7pt;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;color:var(--teal);margin-bottom:5px;">🔗 Extra Resources</div>
+          <div style="font-size:8pt;color:var(--mid);line-height:1.6;">
+            <strong style="color:var(--ink);">Video:</strong> <span style="color:var(--teal);">youtube.com/watch?v=LpMONNzO5jc</span><br>
+            BBC 6 Minute English — <em>How much sleep do you need?</em><br><br>
+            <strong style="color:var(--ink);">Bonus listening:</strong> <span style="color:var(--teal);">youtube.com/watch?v=nm1TxQj9IsQ</span><br>
+            TED-Ed — <em>What would happen if you didn't sleep?</em> (animated, easy English, 5 min)<br><br>
+            <strong style="color:var(--ink);">Grammar practice:</strong> <span style="color:var(--teal);">ego4u.com/en/grammar/modals</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div><!-- /content -->
+
+  <div class="footer">
+    <div><span class="flag">🇬🇧</span> English Lesson · Level B1</div>
+    <div>Modal Verbs · Sleep &amp; Well-being · Unit 4</div>
+  </div>
+
+</div><!-- /page 2 -->
+
+</body>
+</html>
